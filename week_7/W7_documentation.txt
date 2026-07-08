@@ -1,0 +1,13 @@
+Bug identified in main.py:
+
+The program uses:
+
+print(f"Total Payment = RM {total:.2f}")
+
+This causes an error when calculate_total() returns
+"invalid price" or "invalid quantity" because string
+values cannot be formatted using :.2f.
+
+Solution:
+Check whether the returned value is a string before
+printing the result as a float.
